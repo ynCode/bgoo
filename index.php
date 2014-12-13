@@ -240,6 +240,8 @@ if (isset($request->get['route'])) {
 // Dispatch
 $controller->dispatch($action, new Action('error/not_found'));
 
+// show git change
 // Output
 $response->output();
+
 ?>
