@@ -91,3 +91,9 @@ catalog\language\chinese\total\total.php
 catalog\view\theme\gazal\template\module\cart.tpl
 catalog\view\theme\gazal\template\common\header.tpl
 catalog\view\theme\gazal\template\common\home.tpl
+catalog\controller\product\category.php
+catalog\language\chinese\product\category.php
+catalog\controller\module\bestseller.php
+catalog\language\chinese\module\bestseller.php
+catalog\view\theme\gazal\template\module\bestseller.tpl
+catalog\view\theme\gazal\template\product\category.tpl
