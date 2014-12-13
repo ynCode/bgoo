@@ -1,0 +1,55 @@
+---------- Date: 2014-12-09 13:26:13 ~ IP : 61.170.140.115 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /var/www/html/vqmod/xml/hj_simplify_register.xml
+   id        : hj_simplify_register
+   version   : 0.1
+   vqmver    : 2.3.2
+   author    : himurajun@live.com
+VQModObject::parseMods - Could not resolve path for [catalog/language/zh-TW/account/register.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/language/zh-HK/account/register.php] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : /var/www/html/vqmod/xml/news_letter_vqmod.xml
+   id        : NEWS LETTER
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : templates-general.com
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/header.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/controller/sale/contact.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/model/sale/customer.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/header.tpl] (SKIPPED)
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-12-09 15:12:29 ~ IP : 61.170.140.115 ----------
+REQUEST URI : /index.php?route=checkout/payment_address
+MOD DETAILS:
+   modFile   : /var/www/html/vqmod/xml/Registration_simpleregistration.xml
+   id        : [Registration] Simple Registration
+   version   : 1.0
+   vqmver    : 2.4.1
+   author    : Will Choi
+
+File Name    : catalog/controller/checkout/payment_address.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-12-09 15:14:49 ~ IP : 222.190.109.125 ----------
+REQUEST URI : /index.php?route=checkout/guest_shipping
+MOD DETAILS:
+   modFile   : /var/www/html/vqmod/xml/Registration_simpleregistration.xml
+   id        : [Registration] Simple Registration
+   version   : 1.0
+   vqmver    : 2.4.1
+   author    : Will Choi
+
+File Name    : catalog/controller/checkout/guest_shipping.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+
+----------------------------------------------------------------------
+
+

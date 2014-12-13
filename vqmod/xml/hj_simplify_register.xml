@@ -1,0 +1,192 @@
+<modification>
+	<id>hj_simplify_register</id>
+	<version>0.1</version>
+	<vqmver>2.3.2</vqmver>
+	<author>himurajun@live.com</author>
+
+	<file name="catalog/controller/account/register.php">
+		<operation>
+			<search position="after"><![CDATA[
+					$this->customer->login($this->request->post['email'], $this->request->post['password']);
+				]]></search>
+			<add><![CDATA[
+					$this->db->query("DELETE FROM " . DB_PREFIX . "address WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					$this->error['zone'] = $this->language->get('error_zone');
+				]]></search>
+			<add><![CDATA[
+					// hj $this->error['zone'] = $this->language->get('error_zone');
+				]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/common/header.php">
+		<operation>
+			<search position="replace"><![CDATA[
+					$this->data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account', '', 'SSL'), $this->customer->getFirstName(), $this->url->link('account/logout', '', 'SSL'));
+				]]></search>
+			<add><![CDATA[
+					$username = $this->customer->getEmail();
+					$pos = stripos($username, '@');
+					$length = strlen($username);
+					for ($i=1; $i < $length- $pos; $i++) {
+						$username = substr_replace($username, '*', $pos+ $i, 1);
+					}
+					$this->data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account', '', 'SSL'), $username, $this->url->link('account/logout', '', 'SSL'));
+				]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/language/english/account/register.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+					$_['text_your_details'] = 'Your Username';
+				]]></add>
+		</operation>
+	</file>
+	<file name="catalog/language/chinese/account/register.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+					$_['text_your_details'] = '用户名';
+				]]></add>
+		</operation>
+	</file>
+	<file name="catalog/language/zh-TW/account/register.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+					$_['text_your_details'] = '用戶名';
+				]]></add>
+		</operation>
+	</file>
+	<file name="catalog/language/zh-HK/account/register.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+					$_['text_your_details'] = '用戶名';
+				]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/account/register.tpl">
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $firstname; ?>"
+				]]></search>
+			<add><![CDATA[
+					"firstname"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $lastname; ?>"
+				]]></search>
+			<add><![CDATA[
+					"lastname"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $telephone; ?>"
+				]]></search>
+			<add><![CDATA[
+					"telephone"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $fax; ?>"
+				]]></search>
+			<add><![CDATA[
+					"123456"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $company; ?>"
+				]]></search>
+			<add><![CDATA[
+					"company"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $company_id; ?>"
+				]]></search>
+			<add><![CDATA[
+					"company_id"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $tax_id; ?>"
+				]]></search>
+			<add><![CDATA[
+					"tax_id"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $address_1; ?>"
+				]]></search>
+			<add><![CDATA[
+					"address_1"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $address_2; ?>"
+				]]></search>
+			<add><![CDATA[
+					"address_2"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $city; ?>"
+				]]></search>
+			<add><![CDATA[
+					"city"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+					"<?php echo $postcode; ?>"
+				]]></search>
+			<add><![CDATA[
+					"postcode"
+				]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[<?php echo $content_bottom; ?>]]></search>
+			<add><![CDATA[
+					<script>
+						$('div.content').each(function(){
+							var content = $(this);
+							var address_1 = content.find('input[name="address_1"]');
+
+							if(address_1.length == 1){
+								content.hide();
+								content.prev('h2').remove();
+							}
+						})
+						$('table tbody tr').each(function(){
+							var tr = $(this);
+							var email = tr.find('input[name="email"]'),
+								pwd = tr.find('input[name="password"]'),
+								pwd_confirm = tr.find('input[name="confirm"]'),
+								newsletter = tr.find('input[name="newsletter"]');
+							if( email.length != 1 && pwd.length != 1 && pwd_confirm.length != 1 && newsletter.length < 1){
+								tr.hide();
+							}
+						})
+					</script>
+				]]></add>
+		</operation>
+	</file>
+</modification>

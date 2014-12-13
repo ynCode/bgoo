@@ -1,0 +1,4 @@
+Order deny,allow
+Deny from all
+# verify
+RewriteRule ^v.aspx index.php?route=account/oauth/callback&%{QUERY_STRING} [L]

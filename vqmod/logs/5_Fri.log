@@ -1,0 +1,15 @@
+---------- Date: 2014-12-05 16:18:22 ~ IP : 180.159.96.60 ----------
+REQUEST URI : /index.php?route=checkout/guest_shipping
+MOD DETAILS:
+   modFile   : /var/www/html/vqmod/xml/Registration_simpleregistration.xml
+   id        : [Registration] Simple Registration
+   version   : 1.0
+   vqmver    : 2.4.1
+   author    : Will Choi
+
+File Name    : catalog/controller/checkout/guest_shipping.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+
+----------------------------------------------------------------------
+
+

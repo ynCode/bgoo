@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot');
+  src: url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.font-icon {
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+.side-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /*background: #eaeaea;*/
+
+    background: none repeat scroll 0% 0% #5c5b59;
+    right: 0;
+    width: 35px;
+    list-style: none;
+    z-index: 100;
+}
+.side-bar ul {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    height: 400px;
+    margin-top: -200px;
+    width: 100%;
+}
+.side-bar a {
+    height: 10px;
+    font-size: 12px;
+    padding: 20px 5px;
+    display: block;
+    text-decoration: none!important;
+    border-top: 1px #FFA5A5 dotted;
+}
+.side-bar em {
+    font-style: normal;
+    margin-left: 4px;
+}
+.side-bar .side-bar-cart {
+    height: 30px;
+}
+.side-bar ul li span {
+    position: relative;
+    width: 50px;
+    /*background: #f7d024;*/
+
+    background: none repeat scroll 0% 0% #F58C7C;
+    color: #FFF;
+    right: 95px;
+    display: none;
+    bottom: 35px;
+    padding: 20px 20px;
+    font-size: 12px;
+}
+.side-bar ul li .side-bar-cart span {
+    padding: 21px 20px;
+    bottom: 58px;
+}
+.side-bar p.num-cart-side-bar {
+    background: red;
+    border-radius: 10px;
+    border: none;
+    padding: 4px;
+    height: 12px;
+    width: 12px;
+    display: block;
+    text-align: center;
+    margin: 3px 3px 0 3px;
+    color: #fff;
+}
+.side-bar-cart span p {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.font-icon:before {
+    color: #fff;
+    font-size: 15px;
+}
+.customer:before {
+    content: "\e183";
+}
+.bill:before {
+    content: "\e013";
+}
+.side-bar-cart:before {
+    content: "\e116";
+}
+.collection:before {
+    content: "\e005";
+}
+.home-main-menu:before {
+    content: "\e021";
+}
+/*.customer {
+    background: url(../image/side-bar.png) 0px -140px no-repeat;
+}
+.bill {
+    background: url(../image/side-bar.png) 0px -92px no-repeat;
+}
+.side-bar-cart {
+    background: url(../image/side-bar.png) 0px -54px no-repeat;
+}
+.collection {
+    background: url(../image/side-bar.png) 0px -10px no-repeat;
+}
+*/
+
+.side-bar ul a:hover>span, .side-bar ul a:hover>span>span {
+    display: block;
+}

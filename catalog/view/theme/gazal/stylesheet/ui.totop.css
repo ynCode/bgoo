@@ -1,0 +1,41 @@
+/*
+|--------------------------------------------------------------------------
+| UItoTop jQuery Plugin 1.2
+| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+|--------------------------------------------------------------------------
+*/
+
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    padding: 10px;
+    overflow: hidden;
+    border: none;
+    color: #fff;
+    background: none repeat scroll 0% 0% rgb(242, 231, 20);
+    z-index: 120;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+#toTop:hover {
+    background: none repeat scroll 0% 0% rgb(242, 231, 20);
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+#toTop:active, #toTop:focus {
+    outline: none;
+}
+#toTop:before {
+    content: "\e113";
+}

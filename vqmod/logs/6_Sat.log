@@ -1,0 +1,25 @@
+---------- Date: 2014-12-13 23:12:06 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /bgoo/
+MOD DETAILS:
+   modFile   : C:\Users\younixiao\Documents\Code\www\bgoo\vqmod/xml/hj_simplify_register.xml
+   id        : hj_simplify_register
+   version   : 0.1
+   vqmver    : 2.3.2
+   author    : himurajun@live.com
+VQModObject::parseMods - Could not resolve path for [catalog/language/zh-TW/account/register.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/language/zh-HK/account/register.php] (SKIPPED)
+
+MOD DETAILS:
+   modFile   : C:\Users\younixiao\Documents\Code\www\bgoo\vqmod/xml/news_letter_vqmod.xml
+   id        : NEWS LETTER
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : templates-general.com
+VQModObject::parseMods - Could not resolve path for [admin/controller/common/header.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/controller/sale/contact.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/model/sale/customer.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/view/template/common/header.tpl] (SKIPPED)
+
+----------------------------------------------------------------------
+
+
